@@ -15,7 +15,7 @@
   <name>gpt-connector-commons</name>
   <description>gpt-connector-commons</description>
   <properties>
-    <java.version>20</java.version>
+    <java.version>21</java.version>
   </properties>
   <dependencies>
     <dependency>
