@@ -11,7 +11,7 @@
   </parent>
   <groupId>com.zonief</groupId>
   <artifactId>gpt-connector-commons</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>gpt-connector-commons</name>
   <description>gpt-connector-commons</description>
   <properties>
