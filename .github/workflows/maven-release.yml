@@ -54,15 +54,15 @@ jobs:
           fetch-depth: '0'
 
       - name: Echo tag for debugging
-        run: echo "Tag from auto_tag step is ${{ steps.auto_tag.outputs.tag }}"
+        run: echo "Tag from auto_tag step is ${{ build.steps.auto_tag.outputs.tag }}"
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-          tag_name: ${{ steps.auto_tag.outputs.tag }}
-          release_name: Release ${{ steps.auto_tag.outputs.tag }}
+          tag_name: ${{ build.steps.auto_tag.outputs.tag }}
+          release_name: Release ${{ build.steps.auto_tag.outputs.tag }}
           body: |
             Changes in this Release
-            - Auto-incremented version to ${{ steps.auto_tag.outputs.tag }}
+            - Auto-incremented version to ${{ build.steps.auto_tag.outputs.tag }}
